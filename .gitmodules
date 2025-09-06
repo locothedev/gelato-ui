@@ -1,0 +1,3 @@
+[submodule "packages/gelato-ui"]
+	path = packages/gelato-ui
+	url = https://github.com/locothedev/gelato-ui.git
