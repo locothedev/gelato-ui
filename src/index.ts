@@ -5,6 +5,7 @@ export * from './components/ui/card';
 export * from './components/ui/skeleton';
 export * from './components/ui/sonner';
 export { default as LoadingSplash } from './components/ui/loading-splash';
+export { default as GelatoLoading } from './components/ui/gelato-loading';
 
 // Wallet Components
 export * from './components/wallet/wallet-card';
