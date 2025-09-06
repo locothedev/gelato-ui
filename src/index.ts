@@ -4,7 +4,7 @@ export * from './components/ui/button';
 export * from './components/ui/card';
 export * from './components/ui/skeleton';
 export * from './components/ui/sonner';
-export * from './components/ui/loading-splash';
+export { default as LoadingSplash } from './components/ui/loading-splash';
 
 // Wallet Components
 export * from './components/wallet/wallet-card';
