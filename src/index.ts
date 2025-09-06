@@ -19,3 +19,6 @@ export * from "./utils";
 
 // Lib
 export { cn } from "./lib/utils";
+
+// Hooks
+export * from "./hooks/use-media-query";
