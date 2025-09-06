@@ -7,3 +7,4 @@ build
 .turbo
 .next
 bun.lockb
+coverage

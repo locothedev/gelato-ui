@@ -25,14 +25,19 @@ export function WalletCard(
 ) {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    if (onCopyClick) {
-      onCopyClick(address);
-    } else {
-      navigator.clipboard.writeText(address);
+  const handleCopy = async () => {
+    try {
+      if (onCopyClick) {
+        onCopyClick(address);
+      } else {
+        await navigator.clipboard.writeText(address);
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      // Silently fail if clipboard access is denied
+      console.error('Failed to copy:', error);
     }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
