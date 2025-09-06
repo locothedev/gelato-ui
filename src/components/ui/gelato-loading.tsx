@@ -13,9 +13,9 @@ interface GelatoLoadingProps {
   imageAlt?: string;
 }
 
-export default function GelatoLoading({ 
-  imageSrc = "/gelato.png", 
-  imageAlt = "Gelato loading" 
+export default function GelatoLoading({
+  imageSrc = "/gelato.png",
+  imageAlt = "Gelato loading",
 }: GelatoLoadingProps = {}) {
   return <LoadingSplash imageSrc={imageSrc} imageAlt={imageAlt} />;
 }

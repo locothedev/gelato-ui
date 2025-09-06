@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
-import { Copy, Check, LogOut } from "lucide-react";
+import { Check, Copy, LogOut } from "lucide-react";
 import { formatAddress } from "../../utils/address";
 
 interface WalletCardProps {
@@ -20,7 +20,9 @@ interface WalletCardProps {
   onCopyClick?: (address: string) => void;
 }
 
-export function WalletCard({ address, onLogoutClick, onCopyClick }: WalletCardProps) {
+export function WalletCard(
+  { address, onLogoutClick, onCopyClick }: WalletCardProps,
+) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -36,7 +38,9 @@ export function WalletCard({ address, onLogoutClick, onCopyClick }: WalletCardPr
   return (
     <Card className="p-6">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-sm font-medium text-muted-foreground">Your Wallet</h3>
+        <h3 className="text-sm font-medium text-muted-foreground">
+          Your Wallet
+        </h3>
         {onLogoutClick && (
           <Button
             variant="ghost"
@@ -48,7 +52,7 @@ export function WalletCard({ address, onLogoutClick, onCopyClick }: WalletCardPr
           </Button>
         )}
       </div>
-      
+
       <div className="flex items-center justify-between">
         <code className="text-lg font-mono">{formatAddress(address)}</code>
         <Button
@@ -56,11 +60,9 @@ export function WalletCard({ address, onLogoutClick, onCopyClick }: WalletCardPr
           size="sm"
           onClick={handleCopy}
         >
-          {copied ? (
-            <Check className="w-4 h-4 text-green-500" />
-          ) : (
-            <Copy className="w-4 h-4" />
-          )}
+          {copied
+            ? <Check className="w-4 h-4 text-green-500" />
+            : <Copy className="w-4 h-4" />}
         </Button>
       </div>
     </Card>

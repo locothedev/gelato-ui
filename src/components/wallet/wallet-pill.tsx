@@ -53,7 +53,7 @@ export const WalletPill = ({
         "bg-background border border-border",
         "text-xs font-mono text-foreground",
         "shadow-sm hover:shadow-md transition-all duration-200",
-        className
+        className,
       )}
     >
       {/* Address with copy functionality */}
@@ -63,18 +63,16 @@ export const WalletPill = ({
           "flex items-center gap-1.5 px-1.5 py-0 h-full rounded-full leading-none",
           "transition-colors duration-200 ease-in-out",
           "hover:bg-secondary/50",
-          isCopied ? "text-green-600" : "text-foreground hover:text-primary"
+          isCopied ? "text-green-600" : "text-foreground hover:text-primary",
         )}
       >
         <span className="text-[11px] leading-none">
           {truncateAddress(address)}
         </span>
         <div className="transition-transform duration-200 ease-in-out">
-          {isCopied ? (
-            <Check className="h-3 w-3" />
-          ) : (
-            <Copy className="h-3 w-3" />
-          )}
+          {isCopied
+            ? <Check className="h-3 w-3" />
+            : <Copy className="h-3 w-3" />}
         </div>
       </button>
 
@@ -91,7 +89,7 @@ export const WalletPill = ({
               "text-xs font-medium",
               "text-muted-foreground hover:text-destructive",
               "hover:bg-destructive/10",
-              "transition-colors duration-200"
+              "transition-colors duration-200",
             )}
           >
             <LogOut className="h-3 w-3" />

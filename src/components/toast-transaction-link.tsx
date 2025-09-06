@@ -24,12 +24,12 @@ export function ToastTransactionLink({
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1 underline font-medium transition-colors"
         style={{ color: "var(--brand-primary)" }}
-        onMouseEnter={(e) =>
-          (e.currentTarget.style.color = "var(--brand-secondary)")
-        }
-        onMouseLeave={(e) =>
-          (e.currentTarget.style.color = "var(--brand-primary)")
-        }
+        onMouseEnter={(
+          e,
+        ) => (e.currentTarget.style.color = "var(--brand-secondary)")}
+        onMouseLeave={(
+          e,
+        ) => (e.currentTarget.style.color = "var(--brand-primary)")}
       >
         View transaction
         <ExternalLink className="h-3 w-3" />

@@ -3,11 +3,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
-  --brand-gradient: linear-gradient(80deg, rgb(230, 29, 77) 0%, rgb(215, 6, 102) 100%);
+
+  --brand-gradient: linear-gradient(
+    80deg,
+    rgb(230, 29, 77) 0%,
+    rgb(215, 6, 102) 100%
+  );
   --brand-primary: rgb(230, 29, 77);
   --brand-secondary: rgb(215, 6, 102);
-  
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -26,7 +30,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
